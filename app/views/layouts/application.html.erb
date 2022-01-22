@@ -12,6 +12,10 @@
   </head>
 
   <body>
+  <div class="nav-bar">
+    <p class="nav-name">Watch List</p>
+    <%= link_to "Create a new list", new_list_path, class: "btn btn-success" %>
+  </div>
     <%= yield %>
   </body>
 </html>

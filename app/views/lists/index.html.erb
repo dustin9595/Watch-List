@@ -1,0 +1,19 @@
+<div class="background" style="background-image: url('https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80)">
+  <div class="container">
+    <div class="hero">
+     <h1 class="headline">Find your favorite movies</h1>
+    </div>
+    <div class="list-section">
+      <h2 class="subheadline">All lists</h2>
+      <div class="list-items">
+      <div class="list-item">
+        <% @lists.each do |list| %>
+        <div class="list-image" style ="background-image: url('<%= list.url %>')">
+          <%= link_to "#{list.name}", list_path(list), class: "image-headline" %>
+        </div>
+        <% end %>
+      </div>
+      </div>
+    </div>
+  </div>
+</div>
