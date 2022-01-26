@@ -3,7 +3,9 @@
 <div class="form">
   <%= simple_form_for(@list) do |f| %>
   <%= f.input :name %>
-  <%= f.input :url %>
+  <%= f.input :photo, as: :file %>
   <%= f.submit %>
 <% end %>
 </div>
+
+<%= link_to "Back to overview", lists_path %>

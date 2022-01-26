@@ -8,7 +8,7 @@
       <div class="list-items">
       <div class="list-item">
         <% @lists.each do |list| %>
-        <div class="list-image" style ="background-image: url('<%= list.url %>')">
+        <div class="list-image" style="background-image: url('<%= cl_image_path list.photo.key, height: 300, width: 500, crop: :fill %>')">
           <%= link_to "#{list.name}", list_path(list), class: "image-headline" %>
         </div>
         <% end %>
